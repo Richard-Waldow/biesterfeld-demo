@@ -1,0 +1,38 @@
+/* Version 4: #custom (custom.js). Base product + customisation = your solution, large, right after the product demo. */
+.cu-h { max-width: 24ch; margin: 0; }
+.cu-h em { font-style: normal; color: var(--d); }
+
+.cu-sum { display: grid; grid-template-columns: minmax(0, .85fr) auto minmax(0, 1.5fr) auto minmax(0, .75fr); align-items: stretch; gap: 1.1rem; margin-top: clamp(2.4rem, 5vw, 3.6rem); }
+.cu-sum small { display: block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.cu-op { align-self: center; font-family: var(--mono); font-size: clamp(2rem, 3.4vw, 3rem); color: var(--ink-3); line-height: 1; }
+
+.cu-base { padding: 1.5rem; border-radius: var(--r); border: 1px solid var(--line-2); background: var(--surface); }
+.cu-base > b { display: block; margin: .35rem 0 1.1rem; font-size: 1.2rem; font-weight: 500; letter-spacing: -.01em; }
+.cu-base ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.cu-base li { padding: .38rem .75rem; border-radius: var(--pill); border: 1px solid var(--line-2); background: rgb(255 255 255 / .03); font-size: 13px; color: var(--ink-2); }
+
+.cu-cust { padding: 1.5rem 1.6rem; border-radius: var(--r); border: 1px solid rgb(var(--d-rgb) / .5); background: linear-gradient(160deg, rgb(var(--d-rgb) / .16), var(--surface) 60%); }
+.cu-cust > small { color: var(--d-ink); }
+.cu-cust ol { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.3rem 1.6rem; }
+.cu-cust li { display: flex; gap: .85rem; }
+.cu-cust li > .ph-light { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: rgb(var(--d-rgb) / .16); color: var(--d); font-size: 21px; }
+.cu-cust b { display: block; font-size: 1.12rem; font-weight: 500; letter-spacing: -.01em; }
+.cu-cust p { margin: .3rem 0 0; font-size: 14px; line-height: 1.5; color: var(--ink-2); }
+
+.cu-res { display: flex; flex-direction: column; justify-content: center; gap: .5rem; padding: 1.5rem; border-radius: var(--r); background: var(--d); color: var(--on-d); }
+.cu-res > .ph-light { font-size: 30px; }
+.cu-res b { font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 500; letter-spacing: -.02em; line-height: 1.1; }
+.cu-res p { margin: 0; font-size: 14px; line-height: 1.5; opacity: .9; }
+
+.cu-steps { list-style: none; margin: clamp(2.6rem, 5vw, 3.6rem) 0 0; padding: 1.8rem 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.cu-steps span { display: block; font-family: var(--mono); font-size: 13px; color: var(--d-ink); }
+.cu-steps b { display: block; margin-top: .5rem; font-size: 1.2rem; font-weight: 500; }
+.cu-steps p { margin: .4rem 0 0; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); max-width: 34ch; }
+
+@media (max-width: 1200px) {
+  .cu-sum { grid-template-columns: 1fr; }
+  .cu-op { justify-self: center; }
+}
+@media (max-width: 700px) {
+  .cu-cust ol, .cu-steps { grid-template-columns: 1fr; }
+}

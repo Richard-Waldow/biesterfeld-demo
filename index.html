@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0c0f">
+<title>Biesterfeld Demo</title>
+<link rel="icon" href="shared/logos/biesterfeld.svg">
+<link rel="preload" href="shared/fonts/Geist-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="shared/vendor/phosphor/style.css?v=20261020h">
+<link rel="stylesheet" href="shared/beauty/app.css?v=20261020h">
+<link rel="stylesheet" href="shared/beauty/sections.css?v=20261020h">
+<link rel="stylesheet" href="shared/beauty/ae.css?v=20261020h">
+<link rel="stylesheet" href="shared/beauty/gantt.css?v=20261020h">
+<link rel="stylesheet" href="shared/beauty/workday.css?v=20261020h">
+<link rel="stylesheet" href="style.css?v=20261020h">
+<link rel="stylesheet" href="brand.css?v=20261020h">
+<link rel="stylesheet" href="shared/beauty/layer.css?v=20261020h">
+<link rel="stylesheet" href="simple.css?v=20261020h">
+<link rel="stylesheet" href="layers.css?v=20261020h">
+<link rel="stylesheet" href="custom.css?v=20261020h">
+<link rel="stylesheet" href="proof.css?v=20261020h">
+<link rel="alternate" hreflang="de" href="https://richard-waldow.github.io/biesterfeld-demo/">
+<link rel="alternate" hreflang="en" href="https://richard-waldow.github.io/biesterfeld-demo/en/">
+</head>
+<body>
+<span id="top-sentinel" aria-hidden="true"></span>
+<header class="top">
+  <a class="brand" href="#what"><img src="shared/logos/biesterfeld.svg" alt=""><span>Biesterfeld Plastic</span></a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#brief" data-t="nav_brief"></a><a href="#layer" data-t="nav_layer"></a><a href="#plan" data-t="nav_plan"></a><a href="#value" data-t="value"></a><a href="#how" data-t="nav_demo"></a><a href="#workday" data-t="workday"></a><a href="#play" data-t="product"></a><a href="#custom" data-t="nav_custom"></a><a href="#roadmap" data-t="nav_pilot"></a><a href="#start" data-t="start"></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language"><button data-lang="de">DE</button><button data-lang="en">EN</button></div>
+</header>
+
+<main>
+  <!-- WHAT: the granulate field -->
+  <section class="hero" id="what">
+    <canvas id="granules" aria-hidden="true"></canvas>
+    <div class="hero-in wrap">
+      <div class="hero-title">
+        <p class="hero-eyebrow reveal"><i class="ph-light ph-steering-wheel" aria-hidden="true"></i>Autopilot for Sales</p>
+        <h1 class="reveal" data-t="h1"></h1>
+      </div>
+      <div class="sides">
+        <div class="side side-d reveal">
+          <h2 data-t="demand"></h2>
+          <ul class="factors">
+            <li><svg class="spark" viewBox="0 0 80 32"><path d="M2 26H12V10H18V26H30V4H36V26H48V16H54V26H78"/></svg><b data-t="f_calloff"></b><small data-t="f_calloff_s"></small></li>
+            <li><svg class="spark" viewBox="0 0 80 32"><path d="M2 22C12 4 22 4 32 18S52 30 62 14S72 6 78 10"/></svg><b data-t="f_season"></b><small data-t="f_season_s"></small></li>
+            <li><svg class="spark" viewBox="0 0 80 32"><path d="M2 24H30V12H54V6H78"/></svg><b data-t="f_reg"></b><small data-t="f_reg_s"></small></li>
+          </ul>
+          <span class="arrow-down" aria-hidden="true"><i></i></span>
+        </div>
+        <p class="glue reveal" data-t="glue"></p>
+        <div class="side side-s reveal">
+          <h2 data-t="supply"></h2>
+          <ul class="factors">
+            <li><svg class="spark" viewBox="0 0 80 32"><path d="M2 20L8 16L13 22L19 10L25 14L31 6L37 18L43 12L49 24L55 10L61 16L67 8L73 20L78 14"/></svg><b data-t="f_price"></b><small data-t="f_price_s"></small></li>
+            <li><svg class="spark" viewBox="0 0 80 32"><path d="M5 30V8M13 30V8M21 30V8M45 30V8M61 30V8M69 30V8"/></svg><b data-t="f_fm"></b><small data-t="f_fm_s"></small></li>
+            <li><svg class="spark" viewBox="0 0 80 32"><path d="M2 8H18L24 26C42 26 56 18 78 10"/></svg><b data-t="f_freight"></b><small data-t="f_freight_s"></small></li>
+          </ul>
+          <span class="arrow-down" aria-hidden="true"><i></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IN ONE MINUTE: problem, what it does, what it is worth, the ask (simple.js) -->
+  <section class="sec sec-brief" id="brief"></section>
+
+  <!-- AUTOPILOT FOR SALES: one layer on top of the existing systems, drawn GeneralMind-style with an action feed (layers.js, this version only) -->
+  <section class="sec sec-layer" id="layer"></section>
+
+  <!-- PIPELINE PLANNING: every opportunity on one timeline (layer.js + gantt.js) -->
+  <section class="sec sec-plan" id="plan"></section>
+
+  <!-- VALUE: hours and margin, results first -->
+  <section class="sec sec-value" id="value"></section>
+
+  <!-- HOW -->
+  <section class="sec sec-how" id="how">
+    <div class="wrap">
+      <div class="how-head reveal">
+        <h2 class="h2" data-t="h2_how"></h2>
+        <button class="btn btn-quiet" id="sample-all"><span data-t="sample"></span><span class="btn-ic"><i class="ph-light ph-arrow-right"></i></span></button>
+      </div>
+      <div class="how-grid">
+        <div class="panel panel-d reveal" data-side="demand">
+          <div class="panel-head"><span class="pellet"></span><b data-t="demand"></b><button class="tmpl" type="button"><i class="ph-light ph-download-simple"></i><span data-t="template"></span></button></div>
+          <div class="sources"></div>
+          <label class="drop"><input type="file" accept=".xlsx,.xls,.csv" hidden><i class="ph-light ph-microsoft-excel-logo"></i><span data-t="drop"></span></label>
+          <form class="api" hidden><input type="url" required data-tp="api_ph"><button class="btn btn-small" data-t="go"></button></form>
+          <div class="loaded">
+            <div class="count"><b class="n">0</b><span data-t="needs"></span><b class="n2">0</b><span data-t="customers"></span><b class="n3"></b></div>
+            <div class="dots"></div>
+            <div class="files"></div>
+          </div>
+        </div>
+        <div class="engine reveal">
+          <svg class="feeds" viewBox="0 0 300 300" preserveAspectRatio="none" aria-hidden="true"><path class="feed feed-d" d="M0 150H150"/><path class="feed feed-s" d="M300 150H150"/></svg>
+          <div class="core" id="core"><i class="ph-light ph-arrows-merge"></i></div>
+          <button class="btn btn-primary" id="run" disabled><span data-t="match"></span><span class="btn-ic"><i class="ph-light ph-arrow-down"></i></span></button>
+        </div>
+        <div class="panel panel-s reveal" data-side="supply">
+          <div class="panel-head"><span class="pellet"></span><b data-t="supply"></b><button class="tmpl" type="button"><i class="ph-light ph-download-simple"></i><span data-t="template"></span></button></div>
+          <div class="sources"></div>
+          <label class="drop"><input type="file" accept=".xlsx,.xls,.csv" hidden><i class="ph-light ph-microsoft-excel-logo"></i><span data-t="drop"></span></label>
+          <form class="api" hidden><input type="url" required data-tp="api_ph_s"><button class="btn btn-small" data-t="go"></button></form>
+          <div class="loaded">
+            <div class="count"><b class="n">0</b><span data-t="lots"></span><b class="n2">0</b><span data-t="inbound"></span><b class="n3"></b></div>
+            <div class="dots"></div>
+            <div class="files"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="sec sec-result" id="result">
+    <div class="wrap">
+      <h2 class="h2 reveal" data-t="h2_result"></h2>
+      <div class="kpis reveal">
+        <div class="kpi kpi-cov"><b id="k-cov">-</b><span data-t="k_cov"></span><i class="meter"><i id="k-cov-bar"></i></i></div>
+        <div class="kpi"><b id="k-val">-</b><span data-t="k_val"></span></div>
+        <div class="kpi kpi-margin"><b id="k-margin">-</b><span data-t="k_margin"></span></div>
+        <div class="kpi kpi-gap"><b id="k-gap">-</b><span data-t="k_gap"></span></div>
+      </div>
+      <div class="chart-wrap reveal">
+        <div class="chart-bar">
+          <div class="legend"><span class="lg lg-d" data-t="demand"></span><span class="lg lg-gap" data-t="k_gap"></span><span class="lg lg-s" data-t="supply"></span></div>
+          <div class="filters" id="filters"></div>
+        </div>
+        <div class="chart" id="chart">
+          <svg id="sankey" aria-label="Demand to supply matches"></svg>
+          <div class="empty" id="empty"><button class="btn btn-primary" id="sample-run"><span data-t="sample"></span><span class="btn-ic"><i class="ph-light ph-arrow-right"></i></span></button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKDAY: the whole job, not just the offer -->
+  <section class="sec-workday" id="workday"></section>
+
+  <!-- PRODUCT: play with it -->
+  <section class="sec-play" id="play"></section>
+
+  <!-- BASE PRODUCT + CUSTOMISED SOLUTION: what was just tried is the base; every solution is customised (custom.js) -->
+  <section class="sec sec-custom" id="custom"></section>
+
+  <!-- ALREADY IN USE: 11 account executives, and what one of them says it changes (proof.js) -->
+  <section class="sec sec-proof" id="proof"></section>
+
+
+  <!-- PLAN: Q4 2026 into 2027 -->
+  <section class="sec sec-roadmap" id="roadmap"></section>
+
+  <!-- START -->
+  <section class="sec sec-start" id="start">
+    <div class="wrap">
+      <div class="start-grid">
+        <div>
+          <h2 class="h2 reveal" data-t="h2_start"></h2>
+          <div class="start-row reveal">
+            <button class="btn btn-primary" id="start-cta"><span data-t="start_cta"></span><span class="btn-ic"><i class="ph-light ph-arrow-up"></i></span></button>
+            <p class="private"><i class="ph-light ph-lock-simple"></i><span data-t="private"></span></p>
+          </div>
+        </div>
+        <ol class="steps reveal">
+          <li><i class="ph-light ph-microsoft-excel-logo"></i><b data-t="st_1"></b><span data-t="st_1s"></span></li>
+          <li><i class="ph-light ph-arrows-merge"></i><b data-t="st_2"></b><span data-t="st_2s"></span></li>
+          <li><i class="ph-light ph-chart-line-up"></i><b data-t="st_3"></b><span data-t="st_3s"></span></li>
+        </ol>
+      </div>
+      <div class="trust reveal">
+        <p class="proof" data-t="proof"></p>
+        <div class="integ"><span data-t="connects"></span><ul id="integrations"></ul></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><span data-t="foot"></span><span class="demo-mark" data-t="demo"></span></footer>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+
+<script>window.SHARED_BASE = 'shared/'; window.PAGE_LANG = 'de'; window.STATIC_SITE = true; window.LANG_URLS = { de: './', en: 'en/' };</script>
+<script>window.CALLS_SHOWN = 5; // one large card plus four</script>
+<script>
+  // version 2, for a CFO reading it the first time: the same content, the money and the ask first, details one click away
+  window.PAGE = { compactValue: true, compactWorkday: true, ownLayer: true }; // version 4: #layer is drawn by layers.js
+</script>
+<script>
+  // headings: the problem, then what the product does about it (this page only; the shared scripts fall back to their own words)
+  window.UI_TEXT = {
+    en: {
+      h1: 'Supply is scarce and requests are scattered. Both are matched in minutes.',
+      h2_how: 'Aggregate client and inventory data to find sales opportunities instantly.',
+      h2_result: 'Scarce supply is shared out by gut feel. Here it goes to the right customers, at the best margin.',
+      h2_workday: 'Most messages are not quotes, and follow-ups slip. One guide covers every request.',
+      h2_play: 'Today it is inbox, Excel, SAP and CRM in separate windows. Here it is one dashboard for the day.',
+      h2_value: 'Manual work costs hours, late repricing costs margin. A calculation on assumptions you can check.',
+      h2_roadmap: 'No multi-year IT project: a 30-day pilot first, then one platform for the group.',
+      h2_start: 'Low risk to try: one grade family, your data, 30 days.',
+      nav_brief: 'In one minute', nav_layer: 'System', nav_plan: 'Pipeline', nav_custom: 'Custom', nav_demo: 'Demo', nav_pilot: 'Pilot',
+    },
+    de: {
+      h1: 'Das Angebot ist knapp, die Anfragen sind verstreut. Beides wird in Minuten abgeglichen.',
+      h2_how: 'Kunden- und Bestandsdaten bündeln und Verkaufschancen sofort finden.',
+      h2_result: 'Knappes Inventar wird nach Bauchgefühl verteilt. Hier geht es an die richtigen Kunden, zur besten Marge.',
+      h2_workday: 'Die meisten Nachrichten sind keine Angebotsanfragen, und das Nachfassen geht unter. Ein Leitfaden deckt alle ab.',
+      h2_play: 'Heute sind es Postfach, Excel, SAP und CRM in getrennten Fenstern. Hier ist es ein Dashboard für den ganzen Tag.',
+      h2_value: 'Handarbeit kostet Stunden, späte Neubepreisung kostet Marge. Eine Rechnung mit Annahmen, die Sie prüfen können.',
+      h2_roadmap: 'Kein mehrjähriges IT-Projekt: erst ein 30-Tage-Pilot, dann eine Plattform für die Gruppe.',
+      h2_start: 'Geringes Risiko: eine Typenfamilie, Ihre Daten, 30 Tage.',
+      nav_brief: 'In einer Minute', nav_layer: 'System', nav_plan: 'Pipeline', nav_custom: 'Anpassung', nav_demo: 'Demo', nav_pilot: 'Pilot',
+    },
+  };
+</script>
+<script src="shared/vendor/xlsx.full.min.js?v=20261020h"></script>
+<script src="shared/config.js?v=20261020h"></script>
+<script src="shared/data/sample.js?v=20261020h"></script>
+<script src="shared/engine.js?v=20261020h"></script>
+<script src="shared/ui.js?v=20261020h"></script>
+<script src="shared/call.js?v=20261020h"></script>
+<script src="shared/value.js?v=20261020h"></script>
+<script src="shared/beauty/gantt.js?v=20261020h"></script>
+<script src="shared/beauty/ae.js?v=20261020h"></script>
+<script src="shared/beauty/app.js?v=20261020h"></script>
+<script src="shared/beauty/workday.js?v=20261020h"></script>
+<script src="shared/beauty/sections.js?v=20261020h"></script>
+<script src="shared/beauty/factors.js?v=20261020h"></script>
+<script src="hero.js?v=20261020h"></script>
+<script src="shared/beauty/layer.js?v=20261020h"></script>
+<script src="simple.js?v=20261020h"></script>
+<script src="layers.js?v=20261020h"></script>
+<script src="custom.js?v=20261020h"></script>
+<script src="proof.js?v=20261020h"></script>
+</body>
+</html>
